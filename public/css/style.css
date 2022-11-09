@@ -1,0 +1,49 @@
+
+
+.menu{
+    background-color: #c21ea486;
+}
+
+.buscar{
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+.jumbotron{
+    padding: 3rem;
+    margin-bottom: 0;
+    margin-right: -310px;
+   margin-left: -120px;
+}
+
+.display-4{
+    margin-top: 100px;
+    text-align: center;
+}
+.txt{
+    text-align: center;
+    width: 560px;
+    margin-left: 350px;
+}
+.boton{
+    margin-left: 430px;
+}
+
+
+
+.copy{
+    width: 1040px;
+}
+
+.piePagina{
+    text-align: left;
+}
+.back{
+    padding-right: 3rem;
+    text-align: end;
+}
+
+li a{
+    list-style: none;
+}
+
