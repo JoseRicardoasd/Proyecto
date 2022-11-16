@@ -1,8 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProductoController;
-
+use App\Http\Controllers\añadirLibroController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,12 +14,28 @@ use App\Http\Controllers\ProductoController;
 |
 */
 
-Route::get('/', function () {
+Route::get('/',function(){
     return view('welcome');
 });
 
-Route::get('/lista', [ProductoController::class, 'index'])->name('lista.index');
-Route::get('/alta', [ProductoController::class, 'create'])->name('producto.create');
-Route::get('/lista/{id}', [ProductoController::class, 'show'])->name('producto.show');
+Route::view('/home', 'mostrarLibro')->name('home');
 
-Route::post('/producto', [ProductoController::class, 'store'])->name('producto.store');
+
+//ruta para añadir libros
+Route::post('/añadirLibro',[añadirLibroController::class,'store'])->name('añadirLibro');
+
+//ruta para mostrar libros
+Route::get('/añadirLibro',[añadirLibroController::class,'index'])->name('libros.index');
+
+//ruta mostrar elemento individual
+Route::get('/añadirLibro/{id}',[añadirLibroController::class,'show'])->name('libros.show');
+
+
+//
+Route::delete('/añadirLibro/{id}',[añadirLibroController::class,'destroy'])->name('libros.delete');
+
+//
+Route::get('/añadirLibro/{id}/edit',[añadirLibroController::class,'edit'])->name('libros.edit');
+
+//
+Route::put('/añadirLibro/{id}',[añadirLibroController::class,'update'])->name('libros.update');
